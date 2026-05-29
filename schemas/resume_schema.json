@@ -1,0 +1,32 @@
+{
+  "candidate_profile": {
+    "personal_info": {
+      "name": "string",
+      "email": "string",
+      "phone": "string"
+    },
+    "skills": [
+      {
+        "name": "string",
+        "proficiency": "string",
+        "years_experience": "number"
+      }
+    ],
+    "experience": [
+      {
+        "company": "string",
+        "designation": "string",
+        "duration": "string",
+        "responsibilities": ["string"]
+      }
+    ],
+    "education": [
+      {
+        "degree": "string",
+        "institution": "string",
+        "year_of_completion": "number"
+      }
+    ],
+    "certifications": ["string"]
+  }
+}

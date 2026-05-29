@@ -1,0 +1,18 @@
+{
+  "job_profile": {
+    "job_title": "string",
+    "industry": "string",
+    "required_skills": [
+      {
+        "name": "string",
+        "is_mandatory": "boolean"
+      }
+    ],
+    "experience_required": {
+      "min_years": "number",
+      "max_years": "number"
+    },
+    "education_requirements": ["string"],
+    "certification_requirements": ["string"]
+  }
+}
