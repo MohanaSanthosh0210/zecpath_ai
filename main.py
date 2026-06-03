@@ -1,7 +1,7 @@
 from utils.logger import get_logger
 
 # Initialize the logger
-logger = get_logger()
+logger = get_logger(__name__)
 
 def main():
     # This logs that the system has successfully started

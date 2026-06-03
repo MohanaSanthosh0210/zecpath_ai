@@ -22,6 +22,7 @@ Projects: N/A
 
 ## Challenges
 
+
 - Different heading formats
 - Multi-column resume layouts
 - Embedded contact information sections

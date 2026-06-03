@@ -7,7 +7,9 @@ sys.path.append(os.path.abspath("."))
 from pdf_reader import extract_text_from_pdf
 from docx_reader import extract_text_from_docx
 from text_cleaner import clean_resume_text
-from utils.logger import logger
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 INPUT_FOLDER = "data/resumes"
 OUTPUT_FOLDER = "data/cleaned"

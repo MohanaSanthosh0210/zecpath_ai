@@ -5,6 +5,75 @@
       "email": "string",
       "phone": "string"
     },
+    "skills_extraction": {
+      "extraction_method": "string",
+      "total_skills_extracted": "number",
+      "extraction_timestamp": "string",
+      "skills": [
+        {
+          "name": "string",
+          "category": "string",
+          "proficiency_level": "string",
+          "years_experience": "number",
+          "confidence": "number",
+          "confidence_level": "string",
+          "mentions": "number",
+          "is_verified": "boolean",
+          "sources": ["string"],
+          "component_scores": {
+            "extraction_method": "number",
+            "mention_frequency": "number",
+            "contextual_keywords": "number",
+            "positional_relevance": "number",
+            "proficiency_indicators": "number"
+          },
+          "skill_type": "string"
+        }
+      ],
+      "skills_by_category": {
+        "programming_language": ["string"],
+        "web_framework": ["string"],
+        "database": ["string"],
+        "cloud": ["string"],
+        "devops": ["string"],
+        "data_science": ["string"],
+        "frontend": ["string"],
+        "testing": ["string"],
+        "api": ["string"],
+        "architecture": ["string"],
+        "tools": ["string"],
+        "management": ["string"],
+        "finance": ["string"],
+        "sales": ["string"],
+        "marketing": ["string"],
+        "customer": ["string"],
+        "design": ["string"],
+        "design_tools": ["string"],
+        "writing": ["string"],
+        "media": ["string"],
+        "soft_skills": ["string"]
+      },
+      "skill_stacks_detected": [
+        {
+          "name": "string",
+          "description": "string",
+          "components": ["string"]
+        }
+      ],
+      "confidence_distribution": {
+        "VERY_HIGH": "number",
+        "HIGH": "number",
+        "MEDIUM": "number",
+        "LOW": "number",
+        "VERY_LOW": "number"
+      },
+      "extraction_statistics": {
+        "average_confidence": "number",
+        "high_confidence_skills": "number",
+        "verified_skills": "number",
+        "unverified_skills": "number"
+      }
+    },
     "skills": [
       {
         "name": "string",
