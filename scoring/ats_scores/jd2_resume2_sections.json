@@ -1,0 +1,26 @@
+{
+    "candidate_id": "resume2_sections",
+    "job_id": "jd2",
+    "resume_file": "resume2_sections.json",
+    "job_file": "jd2.json",
+    "role": "",
+    "skill_score": 0.0,
+    "experience_score": 0.0,
+    "education_score": 0.0,
+    "semantic_score": 0.0,
+    "final_ats_score": 0.0,
+    "status": "Rejected",
+    "breakdown": {
+        "skills": 0.0,
+        "experience": 0.0,
+        "education": 0.0,
+        "semantic": 0.0
+    },
+    "reason": "Rejected: weak match across multiple components.",
+    "details": {
+        "skills_similarity": 0.0,
+        "experience_similarity": 0.0,
+        "project_similarity": 0.0,
+        "job_education": ""
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "candidate_id": "resume2_sections",
+    "job_id": "jd1",
+    "resume_file": "resume2_sections.json",
+    "job_file": "jd1.json",
+    "role": "AI Engineer Required Skills: Python Machine Learning FastAPI Docker Experience: 2+ years Education: B.Tech or M.Tech in Computer Science",
+    "skill_score": 0.0,
+    "experience_score": 8.5,
+    "education_score": 60,
+    "semantic_score": 3.8,
+    "final_ats_score": 12.31,
+    "status": "Rejected",
+    "breakdown": {
+        "skills": 0.0,
+        "experience": 8.5,
+        "education": 60,
+        "semantic": 3.8
+    },
+    "reason": "Rejected: weak match across multiple components.",
+    "details": {
+        "skills_similarity": 0.0,
+        "experience_similarity": 8.5,
+        "project_similarity": 0.0,
+        "job_education": "B.Tech or M.Tech in Computer Science"
+    }
+}
