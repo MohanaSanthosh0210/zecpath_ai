@@ -1,0 +1,110 @@
+[
+    {
+        "rank": 1,
+        "candidate_id": "resume2_sections",
+        "job_id": "jd1",
+        "ats_score": 12.31,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 8.5,
+        "education_score": 60,
+        "semantic_score": 3.8,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 2,
+        "candidate_id": "resume1_sections",
+        "job_id": "jd1",
+        "ats_score": 10.86,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 4.8,
+        "education_score": 60,
+        "semantic_score": 2.1,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 3,
+        "candidate_id": "resume3_sections",
+        "job_id": "jd1",
+        "ats_score": 7.45,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 1.8,
+        "education_score": 45,
+        "semantic_score": 0.8,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 4,
+        "candidate_id": "resume1_sections",
+        "job_id": "jd2",
+        "ats_score": 0.0,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 0.0,
+        "education_score": 0.0,
+        "semantic_score": 0.0,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 5,
+        "candidate_id": "resume2_sections",
+        "job_id": "jd2",
+        "ats_score": 0.0,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 0.0,
+        "education_score": 0.0,
+        "semantic_score": 0.0,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 6,
+        "candidate_id": "resume3_sections",
+        "job_id": "jd2",
+        "ats_score": 0.0,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 0.0,
+        "education_score": 0.0,
+        "semantic_score": 0.0,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 7,
+        "candidate_id": "resume1_sections",
+        "job_id": "jd3",
+        "ats_score": 0.0,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 0.0,
+        "education_score": 0.0,
+        "semantic_score": 0.0,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 8,
+        "candidate_id": "resume2_sections",
+        "job_id": "jd3",
+        "ats_score": 0.0,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 0.0,
+        "education_score": 0.0,
+        "semantic_score": 0.0,
+        "reason": "Rejected: weak match across multiple components."
+    },
+    {
+        "rank": 9,
+        "candidate_id": "resume3_sections",
+        "job_id": "jd3",
+        "ats_score": 0.0,
+        "status": "Rejected",
+        "skills_score": 0.0,
+        "experience_score": 0.0,
+        "education_score": 0.0,
+        "semantic_score": 0.0,
+        "reason": "Rejected: weak match across multiple components."
+    }
+]
