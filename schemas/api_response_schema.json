@@ -1,0 +1,5 @@
+{
+    "ats_score": "number",
+    "status": "string",
+    "shortlisted": "boolean"
+}
