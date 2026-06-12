@@ -205,7 +205,37 @@ def extract_certification_names(raw_text: str) -> List[Dict[str, str]]:
     ]
 
 
-def extract_education(data: Dict) -> Dict:
+def extract_education_text(raw_text: str) -> Dict:
+    raw_text = clean_text(raw_text)
+    if not raw_text:
+        return {
+            "education_items": [],
+            "certifications": [],
+            "education": [],
+        }
+
+    education_entries: List[Dict[str, str]] = []
+    for segment in split_education_sections(raw_text):
+        education_entries.append({
+            "degree_type": normalize_degree_type(segment),
+            "field_of_study": normalize_field_of_study(segment),
+            "institution": extract_institution(segment),
+            "graduation_year": extract_graduation_year(segment),
+            "raw_text": segment,
+        })
+
+    certification_entries = extract_certification_names(raw_text)
+    return {
+        "education_items": education_entries,
+        "certifications": certification_entries,
+        "education": education_entries,
+    }
+
+
+def extract_education(data) -> Dict:
+    if isinstance(data, str):
+        return extract_education_text(data)
+
     education_sections = data.get("education", [])
     certification_sections = data.get("certifications", [])
     education_entries: List[Dict[str, str]] = []
@@ -224,7 +254,15 @@ def extract_education(data: Dict) -> Dict:
     return {
         "education": education_entries,
         "certifications": certification_entries,
+        "education_items": education_entries,
     }
+
+
+class EducationParser:
+    """Parser wrapper for resume education extraction."""
+
+    def extract_education(self, resume_text: str) -> Dict:
+        return extract_education(resume_text)
 
 
 if __name__ == "__main__":

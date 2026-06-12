@@ -9,10 +9,13 @@ This module implements sophisticated skill extraction from resume text using:
 - Skill stack detection
 """
 
+from email.mime import text
 import re
 from typing import List, Dict, Set, Tuple
 from collections import defaultdict
 import warnings
+import time
+import gc
 
 try:
     import spacy
@@ -70,10 +73,32 @@ class SkillExtractor:
         self.fuzzy_threshold = fuzzy_threshold
         self.nlp_model = nlp_model
         self.extracted_skills = {}
-        
+        self._fuzzy_cache = {}
+
         # Build lowercase index for faster lookup
         self.skill_index = {name.lower(): name for name in self.all_skills.keys()}
         self.alias_index = self._build_alias_index()
+        self.skill_patterns = {
+            name.lower(): re.compile(r"\b" + re.escape(name.lower()) + r"\b")
+            for name in self.all_skills.keys()
+        }
+        self.alias_patterns = {
+            alias.lower(): re.compile(r"\b" + re.escape(alias.lower()) + r"\b")
+            for skill_data in self.all_skills.values()
+            if "aliases" in skill_data
+            for alias in skill_data["aliases"]
+        }
+        self.version_pattern = re.compile(
+            r"\b(python|java|php|c\+\+|javascript|node\.?js|typescript|ruby|golang|go|rust|scala)\s*(\d+(?:\.\d+)?|\w+)",
+            flags=re.IGNORECASE,
+        )
+        self.stack_pattern = re.compile(r"\b([A-Z]{2,5})\b")
+        self.context_patterns = [
+            re.compile(r"(?:knowledge of|familiar with|expertise in|skilled in|proficient in|experienced with|experience in|worked with|worked on|implemented|developed|built|created)\s+([^.,;\n]+)", flags=re.IGNORECASE),
+            re.compile(r"(?:technologies?|tools?|frameworks?|languages?|platforms?)[:\s]+([^.,;\n]+)", flags=re.IGNORECASE),
+            re.compile(r"(?:technical skills?)[:\s]+([^.,;\n]+)", flags=re.IGNORECASE),
+            re.compile(r"(?:including|includes|such as|for example)\s+([^.,;\n]+)", flags=re.IGNORECASE),
+        ]
         
     def _build_alias_index(self) -> Dict[str, str]:
         """Build an index of aliases to canonical skill names"""
@@ -94,32 +119,44 @@ class SkillExtractor:
         Returns:
             Dictionary of extracted skills with metadata
         """
-        self.extracted_skills = {}
+        try:
+            start_time = time.time()
+            self.extracted_skills = {}
+            logger.info(
+    f"Processing Resume Length: {len(resume_text)} characters"
+)
         
-        # Normalize and prepare text
-        normalized_text = self._normalize_text(resume_text)
+            # Normalize and prepare text
+            normalized_text = self._normalize_text(resume_text)
         
-        # Extract skills using multiple methods
-        explicit_skills = self._extract_explicit_skills(normalized_text)
-        pattern_skills = self._extract_pattern_based_skills(normalized_text)
-        context_skills = self._extract_context_based_skills(normalized_text)
+            # Extract skills using multiple methods
+            explicit_skills = self._extract_explicit_skills(normalized_text)
+            pattern_skills = self._extract_pattern_based_skills(normalized_text)
+            context_skills = self._extract_context_based_skills(normalized_text)
         
-        # Combine all extracted skills
-        all_extracted = {**explicit_skills, **pattern_skills, **context_skills}
+            # Combine all extracted skills
+            all_extracted = {**explicit_skills, **pattern_skills, **context_skills}
         
-        # Deduplicate and normalize
-        self.extracted_skills = self._deduplicate_skills(all_extracted)
+            # Deduplicate and normalize
+            self.extracted_skills = self._deduplicate_skills(all_extracted)
         
-        logger.info(f"Extracted {len(self.extracted_skills)} unique skills")
-        
-        return self.extracted_skills
-    
+            logger.info(f"Extracted {len(self.extracted_skills)} unique skills")
+            end_time = time.time()
+            logger.info(
+    f"Skill Extraction Time: {round(end_time-start_time,2)} sec"
+)
+            gc.collect()
+            return self.extracted_skills
+        except Exception as e:
+            logger.error(
+        f"Skill Extraction Failed: {str(e)}"
+    )
+            return {}
     def _normalize_text(self, text: str) -> str:
-        """Normalize resume text for processing"""
-        # Convert to lowercase
-        text = text.lower()
-        # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text)
+        text = text.lower().strip()
+        text = re.sub(r"[^\x00-\x7F]+", " ", text)
+        text = re.sub(r"\s+", " ", text)
+
         return text
     
     def _extract_explicit_skills(self, text: str) -> Dict[str, Dict]:
@@ -130,33 +167,33 @@ class SkillExtractor:
         extracted = {}
         text_lower = text.lower()
         
-        # Check against skill index and aliases
+        # Check against skill index and aliases using precompiled regex patterns
         for skill_name, skill_data in self.all_skills.items():
             skill_found = False
             match_positions = []
-            
-            # Check main skill name
-            if skill_name.lower() in text_lower:
-                skill_found = True
-                for match in re.finditer(re.escape(skill_name.lower()), text_lower):
+            pattern = self.skill_patterns.get(skill_name.lower())
+
+            if pattern:
+                for match in pattern.finditer(text_lower):
+                    skill_found = True
                     match_positions.append(match.start())
-            
-            # Check aliases
+
             if "aliases" in skill_data:
                 for alias in skill_data["aliases"]:
-                    if alias.lower() in text_lower:
-                        skill_found = True
-                        for match in re.finditer(re.escape(alias.lower()), text_lower):
+                    alias_pattern = self.alias_patterns.get(alias.lower())
+                    if alias_pattern:
+                        for match in alias_pattern.finditer(text_lower):
+                            skill_found = True
                             match_positions.append(match.start())
-            
+
             if skill_found:
                 extracted[skill_name] = {
                     "source": "explicit_match",
-                    "positions": match_positions,
+                    "positions": sorted(match_positions),
                     "count": len(match_positions),
-                    "skill_data": skill_data
+                    "skill_data": skill_data,
                 }
-        
+
         return extracted
     
     def _extract_pattern_based_skills(self, text: str) -> Dict[str, Dict]:
@@ -167,10 +204,7 @@ class SkillExtractor:
         extracted = {}
         text_lower = text.lower()
         
-        # Pattern for technology versions (e.g., Python 3.x, Java 8)
-        version_pattern = r'\b(python|java|php|c\+\+|javascript|node\.?js|typescript|ruby|golang|go|rust|scala)\s*(\d+(?:\.\d+)?|\w+)'
-        
-        for match in re.finditer(version_pattern, text_lower):
+        for match in self.version_pattern.finditer(text_lower):
             tech_name = match.group(1).strip()
             version = match.group(2) if match.group(2) else ""
             
@@ -179,12 +213,10 @@ class SkillExtractor:
                 extracted[normalized] = {
                     "source": "pattern_match",
                     "version": version,
-                    "skill_data": get_skill_by_name(normalized)
+                    "skill_data": get_skill_by_name(normalized),
                 }
         
-        # Pattern for skill stacks (e.g., MERN, MEAN, LAMP)
-        stack_pattern = r'\b([A-Z]{2,5})\b'
-        for match in re.finditer(stack_pattern, text):
+        for match in self.stack_pattern.finditer(text):
             stack_name = match.group(1)
             if is_skill_stack(stack_name):
                 components = get_skill_stack_components(stack_name)
@@ -193,7 +225,7 @@ class SkillExtractor:
                         extracted[component] = {
                             "source": "skill_stack",
                             "stack": stack_name,
-                            "skill_data": get_skill_by_name(component)
+                            "skill_data": get_skill_by_name(component),
                         }
         
         return extracted
@@ -205,29 +237,19 @@ class SkillExtractor:
         """
         extracted = {}
         
-        # Context keywords followed by skills
-        context_patterns = [
-            r'(?:knowledge of|familiar with|expertise in|skilled in|proficient in|experienced with|experience in|worked with|worked on|implemented|developed|built|created)\s+([^.,;\n]+)',
-            r'(?:technologies?|tools?|frameworks?|languages?|platforms?)[:\s]+([^.,;\n]+)',
-            r'(?:technical skills?)[:\s]+([^.,;\n]+)',
-        ]
-        
-        for pattern in context_patterns:
-            for match in re.finditer(pattern, text, re.IGNORECASE):
+        for pattern in self.context_patterns:
+            for match in pattern.finditer(text):
                 skill_text = match.group(1).strip()
-                # Split by common delimiters
                 potential_skills = re.split(r'[,/\sand\s]+', skill_text)
                 
                 for potential_skill in potential_skills:
                     potential_skill = potential_skill.strip()
-                    
-                    # Try to match against known skills
                     matched_skill = self._fuzzy_match_skill(potential_skill)
                     if matched_skill and matched_skill not in extracted:
                         extracted[matched_skill] = {
                             "source": "context_based",
                             "raw_text": potential_skill,
-                            "skill_data": get_skill_by_name(matched_skill)
+                            "skill_data": get_skill_by_name(matched_skill),
                         }
         
         return extracted
@@ -238,6 +260,8 @@ class SkillExtractor:
         Returns the best matching skill name or None.
         """
         text_lower = text.lower().strip()
+        if len(text_lower) < 2:
+            return None
         
         # Exact match first
         if text_lower in self.skill_index:
@@ -246,20 +270,23 @@ class SkillExtractor:
         if text_lower in self.alias_index:
             return self.alias_index[text_lower]
         
-        # Fuzzy match using SequenceMatcher
+        if text_lower in self._fuzzy_cache:
+            return self._fuzzy_cache[text_lower]
+        
         if not DIFFLIB_AVAILABLE:
+            self._fuzzy_cache[text_lower] = None
             return None
         
         best_match = None
         best_ratio = 0
         
-        # Check against all skill names
-        for skill_name in self.all_skills.keys():
+        for skill_name in self.skill_index.values():
             ratio = SequenceMatcher(None, text_lower, skill_name.lower()).ratio()
             if ratio > best_ratio and ratio >= self.fuzzy_threshold:
                 best_ratio = ratio
                 best_match = skill_name
         
+        self._fuzzy_cache[text_lower] = best_match
         return best_match
     
     def _deduplicate_skills(self, extracted: Dict[str, Dict]) -> Dict[str, Dict]:

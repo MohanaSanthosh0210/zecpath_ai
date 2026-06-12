@@ -2,7 +2,9 @@ import json
 import os
 import sys
 
-sys.path.append(os.path.abspath("."))
+sys.path.append(
+    os.path.abspath(".")
+)
 
 from ats_scoring_engine import calculate_ats_score
 
@@ -22,21 +24,34 @@ candidate = {
     "education_score": 80,
 
     "semantic_score": 88
+
 }
 
-final_score = calculate_ats_score(
 
-    role=candidate["role"],
+try:
 
-    skill_score=candidate["skill_score"],
+    final_score = calculate_ats_score(
 
-    experience_score=candidate["experience_score"],
+        role=candidate["role"],
 
-    education_score=candidate["education_score"],
+        skill_score=candidate["skill_score"],
 
-    semantic_score=candidate["semantic_score"]
+        experience_score=candidate["experience_score"],
 
-)
+        education_score=candidate["education_score"],
+
+        semantic_score=candidate["semantic_score"]
+
+    )
+
+except Exception as e:
+
+    print(
+        f"ATS Scoring Failed: {e}"
+    )
+
+    final_score = 0
+
 
 result = {
 
@@ -54,21 +69,31 @@ result = {
 
     "final_ats_score": final_score,
 
-    "status": "Shortlisted" if final_score >= 70 else "Rejected",
+    "status": (
+        "Shortlisted"
+        if final_score >= 70
+        else "Rejected"
+    ),
 
     "breakdown": {
 
-        "skills": candidate["skill_score"],
+        "skills":
+        candidate["skill_score"],
 
-        "experience": candidate["experience_score"],
+        "experience":
+        candidate["experience_score"],
 
-        "education": candidate["education_score"],
+        "education":
+        candidate["education_score"],
 
-        "semantic": candidate["semantic_score"]
+        "semantic":
+        candidate["semantic_score"]
 
     },
 
-    "reason": "Strong skill match and relevant experience"
+    "reason":
+    "Strong skill match and relevant experience"
+
 }
 
 os.makedirs(
@@ -88,4 +113,6 @@ with open(
         indent=4
     )
 
-print("ATS Score Generated Successfully")
+print(
+    "ATS Score Generated Successfully"
+)

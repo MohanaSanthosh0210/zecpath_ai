@@ -59,9 +59,13 @@ class ExperienceParser:
         self.gap_months_threshold = gap_months_threshold
 
     def extract_experience(self, resume_text: str) -> Dict:
-        """Extract experience items and summary metrics from resume text."""
-        if not resume_text:
-            return {
+        """
+        Extract experience items and summary metrics from resume text.
+        """
+
+        try:
+            if not resume_text:
+                return {
                 "experience_items": [],
                 "total_experience_years": 0.0,
                 "total_experience_months": 0,
@@ -70,26 +74,63 @@ class ExperienceParser:
                 "experience_summary": {},
             }
 
-        normalized_text = self._normalize_text(resume_text)
-        section_text = self._find_experience_section(normalized_text)
-        entry_texts = self._split_entries(section_text or normalized_text)
+            normalized_text = self._normalize_text(
+            resume_text
+            )
 
-        experience_items = []
-        for entry_text in entry_texts:
-            item = self._parse_experience_entry(entry_text)
-            if item:
-                experience_items.append(item)
+            section_text = self._find_experience_section(
+            normalized_text
+            )
 
-        merged = self._merge_duplicate_entries(experience_items)
-        metrics = self._summarize_experience(merged)
+            entry_texts = self._split_entries(
+            section_text or normalized_text
+            )
 
-        return {
-            "experience_items": merged,
-            "total_experience_years": round(metrics["total_experience_years"], 2),
-            "total_experience_months": metrics["total_experience_months"],
-            "gaps": metrics["gaps"],
-            "overlaps": metrics["overlaps"],
-            "experience_summary": metrics,
+            experience_items = []
+
+            for entry_text in entry_texts:
+
+                item = self._parse_experience_entry(
+                entry_text
+                )
+
+                if item:
+                    experience_items.append(item)
+
+            merged = self._merge_duplicate_entries(
+                experience_items
+            )
+
+            metrics = self._summarize_experience(
+                merged
+            )
+
+            return {
+                "experience_items": merged,
+                "total_experience_years": round(
+                    metrics["total_experience_years"],
+                    2
+                ),
+                "total_experience_months":
+                    metrics["total_experience_months"],
+                "gaps": metrics["gaps"],
+                "overlaps": metrics["overlaps"],
+                "experience_summary": metrics,
+        }
+
+        except Exception as e:
+
+            logger.error(
+            f"Experience Parsing Failed: {str(e)}"
+        )
+
+            return {
+            "experience_items": [],
+            "total_experience_years": 0.0,
+            "total_experience_months": 0,
+            "gaps": [],
+            "overlaps": [],
+            "experience_summary": {},
         }
 
     def save_experience_json(self, experience_data: Dict, output_dir: str = "data/extracted_experience", filename: Optional[str] = None) -> str:
