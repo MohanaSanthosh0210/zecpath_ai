@@ -1,0 +1,8 @@
+{
+    "default": {
+        "min_ats_score": 60,
+        "review_score": 50,
+        "required_skill_match_percentage": 50,
+        "education_required": true
+    }
+}
