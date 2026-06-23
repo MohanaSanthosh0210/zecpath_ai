@@ -1,42 +1,27 @@
-"""
-Day 24 – Transcript Normalization Module
-"""
+# transcripts/transcript_normalizer.py
 
 import re
 
 
-def normalize_case(text):
-    """
-    Normalize casing.
-    """
-
-    text = text.lower()
-
-    return text
-
-
-def normalize_punctuation(text):
-    """
-    Add punctuation if missing.
-    """
+def normalize_transcript(text):
 
     text = text.strip()
 
-    if text and text[-1] not in ".!?":
+    text = re.sub(
+        r"\s+",
+        " ",
+        text
+    )
+
+    if len(text) > 0:
+
+        text = (
+            text[0].upper() +
+            text[1:]
+        )
+
+    if not text.endswith("."):
+
         text += "."
-
-    return text
-
-
-def normalize_transcript(text):
-    """
-    Full normalization pipeline.
-    """
-
-    text = normalize_case(text)
-
-    text = re.sub(r"\s+", " ", text)
-
-    text = normalize_punctuation(text)
 
     return text

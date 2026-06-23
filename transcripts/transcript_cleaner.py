@@ -1,99 +1,46 @@
-"""
-Day 24 – Speech-to-Text Integration & Cleaning
-
-Deliverable:
-Clean Transcript Processor
-"""
+# transcripts/transcript_cleaner.py
 
 import re
-
 
 FILLER_WORDS = [
     "um",
     "uh",
-    "erm",
-    "ah",
+    "hmm",
     "like",
     "you know",
     "actually",
-    "basically",
-    "sort of",
-    "kind of",
-    "i mean"
+    "basically"
 ]
 
 
-def remove_fillers(text):
-    """
-    Remove filler words.
-    """
+def clean_transcript(text):
 
-    for filler in FILLER_WORDS:
+    text = text.lower()
 
-        pattern = rf"\b{re.escape(filler)}\b"
+    for word in FILLER_WORDS:
 
         text = re.sub(
-            pattern,
+            rf"\b{word}\b",
             "",
-            text,
-            flags=re.IGNORECASE
+            text
         )
 
-    return text
-
-
-def remove_repeated_words(text):
-    """
-    Handle interrupted speech.
-
-    Example:
-    I I I worked on Python
-
-    becomes
-
-    I worked on Python
-    """
-
-    return re.sub(
-        r"\b(\w+)(\s+\1\b)+",
-        r"\1",
-        text,
-        flags=re.IGNORECASE
+    text = re.sub(
+        r"\[.*?\]",
+        "",
+        text
     )
 
+    text = re.sub(
+        r"\s+",
+        " ",
+        text
+    )
 
-def remove_noise_tokens(text):
-    """
-    Remove noise indicators.
-    """
-
-    noise_tokens = [
-        "[noise]",
-        "[silence]",
-        "[background noise]",
-        "[inaudible]"
-    ]
-
-    for token in noise_tokens:
-        text = text.replace(token, "")
-
-    return text
-
-
-def clean_transcript(text):
-    """
-    Main cleaning pipeline.
-    """
-
-    if not text:
-        return ""
-
-    text = remove_noise_tokens(text)
-
-    text = remove_fillers(text)
-
-    text = remove_repeated_words(text)
-
-    text = re.sub(r"\s+", " ", text)
+    text = re.sub(
+        r"\b(\w+)\s+\1\b",
+        r"\1",
+        text
+    )
 
     return text.strip()
