@@ -1,0 +1,20 @@
+from enum import Enum
+
+
+class ConversationState(Enum):
+
+    START = "START"
+
+    ASK_QUESTION = "ASK_QUESTION"
+
+    WAITING_FOR_RESPONSE = "WAITING_FOR_RESPONSE"
+
+    PROCESSING_RESPONSE = "PROCESSING_RESPONSE"
+
+    FOLLOW_UP = "FOLLOW_UP"
+
+    RETRY = "RETRY"
+
+    NEXT_QUESTION = "NEXT_QUESTION"
+
+    END = "END"
