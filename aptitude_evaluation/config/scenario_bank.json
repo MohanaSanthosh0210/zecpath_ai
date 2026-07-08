@@ -1,0 +1,77 @@
+[
+    {
+        "scenario_id": "SJ001",
+        "category": "teamwork",
+        "difficulty": "easy",
+        "question": "A teammate misses an important deadline. What would you do?",
+        "expected_keywords": [
+            "communicate",
+            "understand",
+            "help",
+            "manager"
+        ],
+        "ideal_answer_structure": [
+            "Acknowledge the missed deadline and its impact",
+            "Ask for context and listen to the teammate",
+            "Offer support and clarify the next steps",
+            "Escalate to the manager if the risk remains high"
+        ],
+        "evaluation_dimensions": [
+            "context_awareness",
+            "collaboration",
+            "ownership",
+            "communication"
+        ]
+    },
+
+    {
+        "scenario_id": "SJ002",
+        "category": "problem_solving",
+        "difficulty": "medium",
+        "question": "A client reports a critical bug before deployment. How would you handle the situation?",
+        "expected_keywords": [
+            "analyze",
+            "prioritize",
+            "fix",
+            "test",
+            "communicate"
+        ],
+        "ideal_answer_structure": [
+            "Describe how you would analyze the issue and identify the root cause",
+            "Explain how you would prioritize the fix and limit business impact",
+            "Mention testing and validation before release",
+            "Communicate clearly with the client and internal stakeholders"
+        ],
+        "evaluation_dimensions": [
+            "analytical_thinking",
+            "risk_control",
+            "execution",
+            "communication"
+        ]
+    },
+
+    {
+        "scenario_id": "SJ003",
+        "category": "decision_making",
+        "difficulty": "hard",
+        "question": "You have two urgent tasks with the same deadline. What is your approach?",
+        "expected_keywords": [
+            "prioritize",
+            "impact",
+            "communicate",
+            "plan"
+        ],
+        "ideal_answer_structure": [
+            "Identify the business or customer impact of each task",
+            "Explain how you would prioritize based on urgency and importance",
+            "Share a clear plan and timeline",
+            "Communicate the decision to stakeholders proactively"
+        ],
+        "evaluation_dimensions": [
+            "decision_quality",
+            "prioritization",
+            "planning",
+            "stakeholder_management"
+        ]
+    }
+]
