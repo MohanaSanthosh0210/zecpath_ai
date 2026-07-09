@@ -8,6 +8,9 @@ from reporting.report_utils import (
 from reporting.screening_report_builder import (
     ScreeningReportBuilder
 )
+from reporting.interview_summary_generator import (
+    InterviewSummaryGenerator
+)
 
 
 UNDERSTOOD_ANSWERS_DIR = (
@@ -56,6 +59,48 @@ def get_matching_score_file():
         FINAL_SCORES_DIR,
         score_files[0]
     )
+
+
+def generate_interview_summary_reports():
+
+    os.makedirs(
+        "data/interview_summaries",
+        exist_ok=True
+    )
+
+    generator = InterviewSummaryGenerator(
+        output_dir="data/interview_summaries"
+    )
+
+    answer_data = load_json(
+        os.path.join(
+            UNDERSTOOD_ANSWERS_DIR,
+            "sample_answer.json"
+        )
+    )
+    communication_data = load_json(
+        "data/communication/communication_score.json"
+    )
+    behavior_data = load_json(
+        "data/behavioral_analysis/behavioral_report.json"
+    )
+    hr_score_data = load_json(
+        "data/hr_scoring/hr_score_report.json"
+    )
+
+    report = generator.generate_and_save(
+        answer_data=answer_data,
+        communication_data=communication_data,
+        behavior_data=behavior_data,
+        hr_score_data=hr_score_data,
+        output_file="data/interview_summaries/sample_hr_summary.json",
+    )
+
+    print(
+        "Generated interview summary -> data/interview_summaries/sample_hr_summary.json"
+    )
+
+    return report
 
 
 def generate_screening_reports():
@@ -168,3 +213,4 @@ def generate_screening_reports():
 if __name__ == "__main__":
 
     generate_screening_reports()
+    generate_interview_summary_reports()
