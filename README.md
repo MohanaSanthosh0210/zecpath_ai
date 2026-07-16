@@ -32,7 +32,30 @@ The Zecpath AI Platform is a modular, AI-driven system designed to automate and 
 
 4\. Install requirements: `pip install -r requirements.txt`
 
+## Unified Scoring Engine
 
+The platform now includes a unified hiring intelligence score that combines ATS, screening, and HR interview results into a single candidate score object.
+
+Use it with:
+
+```python
+from scoring.unified_scoring_engine import calculate_unified_score
+
+result = calculate_unified_score(
+    role="python developer",
+    ats_score=85,
+    screening_score=78,
+    hr_score=82,
+    candidate_id="C100",
+    job_id="J100",
+)
+```
+
+It returns a score object containing:
+- round-level scores for ATS, screening, and HR interview
+- role-based weighting adjustments
+- a hiring-fit percentage
+- a status label such as Strong Fit or Needs Review
 
 \## License
 

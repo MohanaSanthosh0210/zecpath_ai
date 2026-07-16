@@ -8,6 +8,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 from scoring.ats_scoring_engine import calculate_ats_score
 from scoring.education_relevance import calculate_education_score
 from scoring.semantic_matching import SemanticMatchingEngine
+from scoring.unified_scoring_engine import calculate_unified_score
 from parsers.education_parser import extract_education
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -179,6 +180,15 @@ def build_candidate_result(
         "semantic": semantic_score,
     }
 
+    unified_result = calculate_unified_score(
+        role=job_profile.get("job_title", ""),
+        ats_score=final_ats_score,
+        screening_score=0,
+        hr_score=0,
+        candidate_id=candidate_id,
+        job_id=job_id,
+    )
+
     result = {
         "candidate_id": candidate_id,
         "job_id": job_id,
@@ -199,6 +209,7 @@ def build_candidate_result(
             "project_similarity": semantic_scores["project_similarity"],
             "job_education": job_profile.get("education", ""),
         },
+        "unified_candidate_score": unified_result,
     }
     return result
 

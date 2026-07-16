@@ -24,6 +24,24 @@
                 "experience_similarity": 4.8,
                 "project_similarity": 0.0,
                 "job_education": "B.Tech or M.Tech in Computer Science"
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume1_sections",
+                "job_id": "jd1",
+                "role": "ai engineer required skills: python machine learning fastapi docker experience: 2+ years education: b.tech or m.tech in computer science",
+                "round_scores": {
+                    "ats": 10.86,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 4.34,
+                "hiring_fit_percentage": 4.34,
+                "status": "Not Fit"
             }
         },
         {
@@ -50,6 +68,24 @@
                 "experience_similarity": 8.5,
                 "project_similarity": 0.0,
                 "job_education": "B.Tech or M.Tech in Computer Science"
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume2_sections",
+                "job_id": "jd1",
+                "role": "ai engineer required skills: python machine learning fastapi docker experience: 2+ years education: b.tech or m.tech in computer science",
+                "round_scores": {
+                    "ats": 12.31,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 4.92,
+                "hiring_fit_percentage": 4.92,
+                "status": "Not Fit"
             }
         },
         {
@@ -76,6 +112,24 @@
                 "experience_similarity": 1.8,
                 "project_similarity": 0.0,
                 "job_education": "B.Tech or M.Tech in Computer Science"
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume3_sections",
+                "job_id": "jd1",
+                "role": "ai engineer required skills: python machine learning fastapi docker experience: 2+ years education: b.tech or m.tech in computer science",
+                "round_scores": {
+                    "ats": 7.45,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 2.98,
+                "hiring_fit_percentage": 2.98,
+                "status": "Not Fit"
             }
         },
         {
@@ -102,6 +156,24 @@
                 "experience_similarity": 0.0,
                 "project_similarity": 0.0,
                 "job_education": ""
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume1_sections",
+                "job_id": "jd2",
+                "role": "",
+                "round_scores": {
+                    "ats": 0.0,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 0.0,
+                "hiring_fit_percentage": 0.0,
+                "status": "Not Fit"
             }
         },
         {
@@ -128,6 +200,24 @@
                 "experience_similarity": 0.0,
                 "project_similarity": 0.0,
                 "job_education": ""
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume2_sections",
+                "job_id": "jd2",
+                "role": "",
+                "round_scores": {
+                    "ats": 0.0,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 0.0,
+                "hiring_fit_percentage": 0.0,
+                "status": "Not Fit"
             }
         },
         {
@@ -154,6 +244,24 @@
                 "experience_similarity": 0.0,
                 "project_similarity": 0.0,
                 "job_education": ""
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume3_sections",
+                "job_id": "jd2",
+                "role": "",
+                "round_scores": {
+                    "ats": 0.0,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 0.0,
+                "hiring_fit_percentage": 0.0,
+                "status": "Not Fit"
             }
         },
         {
@@ -180,6 +288,24 @@
                 "experience_similarity": 0.0,
                 "project_similarity": 0.0,
                 "job_education": ""
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume1_sections",
+                "job_id": "jd3",
+                "role": "",
+                "round_scores": {
+                    "ats": 0.0,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 0.0,
+                "hiring_fit_percentage": 0.0,
+                "status": "Not Fit"
             }
         },
         {
@@ -206,6 +332,24 @@
                 "experience_similarity": 0.0,
                 "project_similarity": 0.0,
                 "job_education": ""
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume2_sections",
+                "job_id": "jd3",
+                "role": "",
+                "round_scores": {
+                    "ats": 0.0,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 0.0,
+                "hiring_fit_percentage": 0.0,
+                "status": "Not Fit"
             }
         },
         {
@@ -232,6 +376,24 @@
                 "experience_similarity": 0.0,
                 "project_similarity": 0.0,
                 "job_education": ""
+            },
+            "unified_candidate_score": {
+                "candidate_id": "resume3_sections",
+                "job_id": "jd3",
+                "role": "",
+                "round_scores": {
+                    "ats": 0.0,
+                    "screening": 0.0,
+                    "hr_interview": 0.0
+                },
+                "weights": {
+                    "ats": 0.4,
+                    "screening": 0.3,
+                    "hr_interview": 0.3
+                },
+                "unified_score": 0.0,
+                "hiring_fit_percentage": 0.0,
+                "status": "Not Fit"
             }
         }
     ]

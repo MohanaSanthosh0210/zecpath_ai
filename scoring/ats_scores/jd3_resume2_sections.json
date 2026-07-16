@@ -22,5 +22,23 @@
         "experience_similarity": 0.0,
         "project_similarity": 0.0,
         "job_education": ""
+    },
+    "unified_candidate_score": {
+        "candidate_id": "resume2_sections",
+        "job_id": "jd3",
+        "role": "",
+        "round_scores": {
+            "ats": 0.0,
+            "screening": 0.0,
+            "hr_interview": 0.0
+        },
+        "weights": {
+            "ats": 0.4,
+            "screening": 0.3,
+            "hr_interview": 0.3
+        },
+        "unified_score": 0.0,
+        "hiring_fit_percentage": 0.0,
+        "status": "Not Fit"
     }
 }
