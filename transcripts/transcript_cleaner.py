@@ -9,38 +9,22 @@ FILLER_WORDS = [
     "like",
     "you know",
     "actually",
-    "basically"
+    "basically",
 ]
 
 
 def clean_transcript(text):
+    if not isinstance(text, str):
+        return ""
 
-    text = text.lower()
+    cleaned = text.lower()
 
     for word in FILLER_WORDS:
+        cleaned = re.sub(rf"\b{word}\b", " ", cleaned)
 
-        text = re.sub(
-            rf"\b{word}\b",
-            "",
-            text
-        )
+    cleaned = re.sub(r"\[.*?\]", " ", cleaned)
+    cleaned = re.sub(r"[^a-z0-9\s.,;:!?'-]", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    cleaned = re.sub(r"\b(\w+)\s+\1\b", r"\1", cleaned)
 
-    text = re.sub(
-        r"\[.*?\]",
-        "",
-        text
-    )
-
-    text = re.sub(
-        r"\s+",
-        " ",
-        text
-    )
-
-    text = re.sub(
-        r"\b(\w+)\s+\1\b",
-        r"\1",
-        text
-    )
-
-    return text.strip()
+    return cleaned.strip()

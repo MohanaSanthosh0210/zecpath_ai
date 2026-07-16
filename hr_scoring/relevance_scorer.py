@@ -60,38 +60,24 @@ class RelevanceScorer:
             )
 
         confidence = (
-
             answer_json.get(
-
                 "structured_answer",
-
                 {}
-
             ).get(
-
                 "intent_confidence",
-
                 answer_json.get(
-
                     "confidence",
-
                     0.50
-
                 )
-
             )
-
         )
 
-        if confidence < 0.50:
-
+        if confidence < 0.40:
             score -= 10
-
-            deductions.append(
-
-                "Low intent confidence"
-
-            )
+            deductions.append("Low intent confidence")
+        elif confidence < 0.60:
+            score -= 3
+            deductions.append("Moderate intent confidence")
 
         score = max(0, score)
 

@@ -31,74 +31,27 @@ class FollowUpTrigger:
 
         )
 
-        # -----------------------------
-        # Clarification
-        # -----------------------------
-
         if analysis["is_incomplete"]:
-
             return {
-
-                "trigger":
-
-                    "Clarification",
-
-                "follow_up":
-
-                    "Could you explain your answer in a little more detail?"
-
+                "trigger": "Clarification",
+                "follow_up": "Could you explain your answer in a little more detail?",
             }
-
-        # -----------------------------
-        # Vague Answer
-        # -----------------------------
 
         if analysis["is_vague"]:
-
             return {
-
-                "trigger":
-
-                    "Clarification",
-
-                "follow_up":
-
-                    "Could you clarify what you mean?"
-
+                "trigger": "Clarification",
+                "follow_up": "Could you clarify what you mean?",
             }
 
-        # -----------------------------
-        # Deepening
-        # -----------------------------
-
-        if analysis["word_count"] < 15:
-
+        if analysis["word_count"] <= 12:
             return {
-
-                "trigger":
-
-                    "Deepening",
-
-                "follow_up":
-
-                    "Can you tell me more about your experience?"
-
+                "trigger": "Deepening",
+                "follow_up": "Can you tell me more about your experience?",
             }
-
-        # -----------------------------
-        # Example-Based
-        # -----------------------------
 
         return {
-
-            "trigger":
-
-                "Example",
-
-            "follow_up":
-
-                "Could you provide a real example from your experience?"
-
+            "trigger": "Example",
+            "follow_up": "Could you provide a real example from your experience?",
         }
 
 
