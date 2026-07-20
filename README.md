@@ -57,6 +57,17 @@ It returns a score object containing:
 - a hiring-fit percentage
 - a status label such as Strong Fit or Needs Review
 
+## HR Interview Demo & Finalization
+
+The final HR interview module is ready for stakeholder review.
+
+Run the components with:
+- python hr_interview/hr_interview_runner.py
+- python hr_scoring/hr_runner.py
+- python hr_interview/demo_runner.py
+
+Generated artifacts are written under data/hr_interview/ and include demo_dataset.json, manager_evaluation_feedback.json, and final_demo_report.json.
+
 \## License
 
 This project is proprietary to Zecpath.
