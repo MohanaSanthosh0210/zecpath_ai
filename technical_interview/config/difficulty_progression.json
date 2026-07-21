@@ -1,0 +1,68 @@
+{
+    "difficulty_progression": {
+        "entry": {
+            "start_level": "easy",
+            "progression": [
+                "easy",
+                "easy",
+                "medium"
+            ],
+            "description": "Freshers are evaluated mainly on programming fundamentals."
+        },
+        "intermediate": {
+            "start_level": "easy",
+            "progression": [
+                "easy",
+                "medium",
+                "medium",
+                "hard"
+            ],
+            "description": "Intermediate candidates are evaluated on implementation and debugging."
+        },
+        "advanced": {
+            "start_level": "medium",
+            "progression": [
+                "medium",
+                "hard",
+                "hard",
+                "expert"
+            ],
+            "description": "Senior candidates are evaluated on architecture, optimization and system design."
+        }
+    },
+
+    "difficulty_definitions": {
+        "easy": {
+            "focus": [
+                "Programming Fundamentals",
+                "Syntax",
+                "Basic Concepts"
+            ]
+        },
+
+        "medium": {
+            "focus": [
+                "Framework Knowledge",
+                "Problem Solving",
+                "Database Design"
+            ]
+        },
+
+        "hard": {
+            "focus": [
+                "Optimization",
+                "Architecture",
+                "Advanced Algorithms"
+            ]
+        },
+
+        "expert": {
+            "focus": [
+                "System Design",
+                "Distributed Systems",
+                "Scalability",
+                "Technical Leadership"
+            ]
+        }
+    }
+}

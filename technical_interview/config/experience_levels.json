@@ -1,0 +1,41 @@
+{
+    "experience_levels": [
+        {
+            "level": "entry",
+            "years": "0-2",
+            "focus": [
+                "Programming Fundamentals",
+                "OOP Basics",
+                "Data Structures",
+                "Problem Solving",
+                "Basic SQL"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "level": "intermediate",
+            "years": "3-5",
+            "focus": [
+                "Framework Knowledge",
+                "API Development",
+                "Database Design",
+                "Debugging",
+                "Optimization"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "level": "advanced",
+            "years": "5+",
+            "focus": [
+                "System Design",
+                "Architecture",
+                "Performance Optimization",
+                "Scalability",
+                "Leadership",
+                "Design Patterns"
+            ],
+            "difficulty": "hard"
+        }
+    ]
+}

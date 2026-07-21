@@ -1,0 +1,156 @@
+{
+    "roles": [
+        {
+            "role": "Python Developer",
+            "primary_skills": [
+                "Python",
+                "OOP",
+                "Data Structures",
+                "Algorithms",
+                "SQL"
+            ],
+            "frameworks": [
+                "Flask",
+                "Django",
+                "FastAPI"
+            ],
+            "advanced_topics": [
+                "Concurrency",
+                "REST APIs",
+                "Performance Optimization"
+            ]
+        },
+        {
+            "role": "Java Developer",
+            "primary_skills": [
+                "Java",
+                "OOP",
+                "Collections",
+                "Multithreading",
+                "SQL"
+            ],
+            "frameworks": [
+                "Spring",
+                "Spring Boot",
+                "Hibernate"
+            ],
+            "advanced_topics": [
+                "Microservices",
+                "JVM",
+                "System Design"
+            ]
+        },
+        {
+            "role": "MERN Stack Developer",
+            "primary_skills": [
+                "JavaScript",
+                "React",
+                "Node.js",
+                "MongoDB"
+            ],
+            "frameworks": [
+                "Express",
+                "React"
+            ],
+            "advanced_topics": [
+                "Authentication",
+                "REST APIs",
+                "Performance Optimization"
+            ]
+        },
+        {
+            "role": "Frontend Developer",
+            "primary_skills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "frameworks": [
+                "React",
+                "Angular",
+                "Vue"
+            ],
+            "advanced_topics": [
+                "State Management",
+                "Performance",
+                "Accessibility"
+            ]
+        },
+        {
+            "role": "Backend Developer",
+            "primary_skills": [
+                "Python",
+                "Java",
+                "SQL",
+                "Database Design"
+            ],
+            "frameworks": [
+                "Flask",
+                "Django",
+                "Spring Boot"
+            ],
+            "advanced_topics": [
+                "Caching",
+                "Scalability",
+                "Distributed Systems"
+            ]
+        },
+        {
+            "role": "DevOps Engineer",
+            "primary_skills": [
+                "Linux",
+                "Docker",
+                "Networking",
+                "CI/CD"
+            ],
+            "frameworks": [
+                "Kubernetes",
+                "Terraform",
+                "Jenkins"
+            ],
+            "advanced_topics": [
+                "Cloud Architecture",
+                "Monitoring",
+                "Infrastructure Automation"
+            ]
+        },
+        {
+            "role": "Data Scientist",
+            "primary_skills": [
+                "Python",
+                "Statistics",
+                "Machine Learning",
+                "SQL"
+            ],
+            "frameworks": [
+                "Scikit-learn",
+                "TensorFlow",
+                "PyTorch"
+            ],
+            "advanced_topics": [
+                "Deep Learning",
+                "Feature Engineering",
+                "Model Deployment"
+            ]
+        },
+        {
+            "role": "AI Engineer",
+            "primary_skills": [
+                "Python",
+                "Machine Learning",
+                "Deep Learning",
+                "NLP"
+            ],
+            "frameworks": [
+                "TensorFlow",
+                "PyTorch",
+                "Transformers"
+            ],
+            "advanced_topics": [
+                "LLMs",
+                "Computer Vision",
+                "MLOps"
+            ]
+        }
+    ]
+}

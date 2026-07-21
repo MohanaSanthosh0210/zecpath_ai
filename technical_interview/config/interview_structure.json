@@ -1,0 +1,43 @@
+{
+    "interview_name": "Technical Interview AI",
+    "version": "1.0",
+    "description": "Configuration defining the overall structure of the technical interview process.",
+    "stages": [
+        {
+            "stage_id": 1,
+            "stage_name": "Introduction",
+            "description": "Greeting, interview overview, and role confirmation.",
+            "question_count": 2
+        },
+        {
+            "stage_id": 2,
+            "stage_name": "Experience Assessment",
+            "description": "Determine candidate experience level and background.",
+            "question_count": 3
+        },
+        {
+            "stage_id": 3,
+            "stage_name": "Conceptual Questions",
+            "description": "Evaluate theoretical understanding of core technologies.",
+            "question_count": 5
+        },
+        {
+            "stage_id": 4,
+            "stage_name": "Practical Coding",
+            "description": "Assess coding ability through practical programming questions.",
+            "question_count": 3
+        },
+        {
+            "stage_id": 5,
+            "stage_name": "Scenario-Based Problems",
+            "description": "Evaluate decision making and real-world problem solving.",
+            "question_count": 2
+        },
+        {
+            "stage_id": 6,
+            "stage_name": "Technical Summary",
+            "description": "Summarize interview performance and conclude the session.",
+            "question_count": 1
+        }
+    ]
+}
