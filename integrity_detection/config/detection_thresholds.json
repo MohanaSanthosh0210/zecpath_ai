@@ -1,0 +1,26 @@
+{
+    "tab_switching": {
+        "warning": 2,
+        "high_risk": 5
+    },
+
+    "screen_focus_loss": {
+        "warning": 2,
+        "high_risk": 4
+    },
+
+    "external_voice": {
+        "warning": 1,
+        "high_risk": 2
+    },
+
+    "repeated_gaze_deviation": {
+        "warning": 5,
+        "high_risk": 10
+    },
+
+    "long_response_pause": {
+        "warning_seconds": 15,
+        "high_risk_seconds": 30
+    }
+}

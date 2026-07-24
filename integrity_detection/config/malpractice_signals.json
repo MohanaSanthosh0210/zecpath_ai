@@ -1,0 +1,24 @@
+{
+    "behavioral_signals": [
+        {
+            "signal": "tab_switching",
+            "description": "Candidate frequently switches browser tabs."
+        },
+        {
+            "signal": "screen_focus_loss",
+            "description": "Interview window loses focus."
+        },
+        {
+            "signal": "external_voice",
+            "description": "Additional voices detected during interview."
+        },
+        {
+            "signal": "repeated_gaze_deviation",
+            "description": "Candidate repeatedly looks away from screen."
+        },
+        {
+            "signal": "long_response_pause",
+            "description": "Unusually long pause before answering."
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "risk_levels": [
+        {
+            "level": "Low",
+            "score_range": [0, 20]
+        },
+        {
+            "level": "Moderate",
+            "score_range": [21, 50]
+        },
+        {
+            "level": "High",
+            "score_range": [51, 75]
+        },
+        {
+            "level": "Critical",
+            "score_range": [76, 100]
+        }
+    ]
+}

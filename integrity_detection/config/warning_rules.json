@@ -1,0 +1,20 @@
+{
+    "warning_rules": [
+        {
+            "condition": "tab_switching_warning",
+            "action": "Display interview warning."
+        },
+        {
+            "condition": "screen_focus_warning",
+            "action": "Record integrity event."
+        },
+        {
+            "condition": "external_voice_detected",
+            "action": "Increase integrity risk score."
+        },
+        {
+            "condition": "critical_risk",
+            "action": "Recommend manual HR review."
+        }
+    ]
+}
