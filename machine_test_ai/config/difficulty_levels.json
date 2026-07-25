@@ -1,0 +1,8 @@
+{
+    "difficulty_levels": [
+        "easy",
+        "medium",
+        "hard",
+        "expert"
+    ]
+}

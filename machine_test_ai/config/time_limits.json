@@ -1,0 +1,14 @@
+{
+    "easy": {
+        "minutes": 20
+    },
+    "medium": {
+        "minutes": 40
+    },
+    "hard": {
+        "minutes": 60
+    },
+    "expert": {
+        "minutes": 90
+    }
+}

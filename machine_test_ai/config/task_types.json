@@ -1,0 +1,20 @@
+{
+    "task_types": [
+        {
+            "type": "coding_problem",
+            "description": "Implement an algorithm or function."
+        },
+        {
+            "type": "debugging_task",
+            "description": "Identify and fix defects in existing code."
+        },
+        {
+            "type": "file_based_task",
+            "description": "Modify or complete files according to requirements."
+        },
+        {
+            "type": "system_design_task",
+            "description": "Design a small software architecture or workflow."
+        }
+    ]
+}

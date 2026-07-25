@@ -1,0 +1,20 @@
+{
+    "evaluation_metrics": [
+        {
+            "metric": "correctness",
+            "description": "Measures whether the solution satisfies expected behaviour."
+        },
+        {
+            "metric": "efficiency",
+            "description": "Measures algorithmic and runtime efficiency."
+        },
+        {
+            "metric": "code_quality",
+            "description": "Measures readability, maintainability and coding standards."
+        },
+        {
+            "metric": "problem_solving",
+            "description": "Measures logical approach and solution strategy."
+        }
+    ]
+}
