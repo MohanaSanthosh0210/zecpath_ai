@@ -1,0 +1,82 @@
+{
+  "default": {
+    "ats": 0.20,
+    "screening": 0.20,
+    "hr_interview": 0.25,
+    "technical_interview": 0.25,
+    "machine_test": 0.10,
+    "behavioral_intelligence": 0.00
+  },
+  "python_developer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.35,
+    "machine_test": 0.15,
+    "behavioral_intelligence": 0.00
+  },
+  "data_scientist": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.30,
+    "machine_test": 0.20,
+    "behavioral_intelligence": 0.00
+  },
+  "frontend_developer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.30,
+    "machine_test": 0.15,
+    "behavioral_intelligence": 0.05
+  },
+  "backend_developer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.35,
+    "machine_test": 0.15,
+    "behavioral_intelligence": 0.00
+  },
+  "fullstack_developer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.35,
+    "machine_test": 0.10,
+    "behavioral_intelligence": 0.05
+  },
+  "product_manager": {
+    "ats": 0.20,
+    "screening": 0.20,
+    "hr_interview": 0.35,
+    "technical_interview": 0.15,
+    "machine_test": 0.05,
+    "behavioral_intelligence": 0.05
+  },
+  "qa_engineer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.25,
+    "technical_interview": 0.30,
+    "machine_test": 0.10,
+    "behavioral_intelligence": 0.05
+  },
+  "devops_engineer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.35,
+    "machine_test": 0.10,
+    "behavioral_intelligence": 0.05
+  },
+  "ml_engineer": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.35,
+    "machine_test": 0.15,
+    "behavioral_intelligence": 0.00
+  }
+}

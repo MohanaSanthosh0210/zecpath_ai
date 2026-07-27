@@ -1,0 +1,100 @@
+{
+  "candidate_id": "demo-candidate",
+  "job_id": null,
+  "role": "python_developer",
+  "round_scores": {
+    "ats": {
+      "round_name": "ats",
+      "score": 70,
+      "max_score": 100.0,
+      "normalized_score": 70.0,
+      "weight": 0.15,
+      "weighted_contribution": 0.105,
+      "components": {},
+      "feedback": null
+    },
+    "screening": {
+      "round_name": "screening",
+      "score": 54.5,
+      "max_score": 100.0,
+      "normalized_score": 54.50000000000001,
+      "weight": 0.15,
+      "weighted_contribution": 0.08175,
+      "components": {},
+      "feedback": null
+    },
+    "hr_interview": {
+      "round_name": "hr_interview",
+      "score": 75,
+      "max_score": 100.0,
+      "normalized_score": 75.0,
+      "weight": 0.2,
+      "weighted_contribution": 0.15000000000000002,
+      "components": {},
+      "feedback": null
+    },
+    "technical_interview": {
+      "round_name": "technical_interview",
+      "score": 80,
+      "max_score": 100.0,
+      "normalized_score": 86.66666666666667,
+      "weight": 0.35,
+      "weighted_contribution": 0.30333333333333334,
+      "components": {},
+      "feedback": null
+    },
+    "machine_test": {
+      "round_name": "machine_test",
+      "score": 78,
+      "max_score": 100.0,
+      "normalized_score": 84.66666666666667,
+      "weight": 0.15,
+      "weighted_contribution": 0.127,
+      "components": {},
+      "feedback": null
+    }
+  },
+  "weights": {
+    "ats": 0.15,
+    "screening": 0.15,
+    "hr_interview": 0.2,
+    "technical_interview": 0.35,
+    "machine_test": 0.15,
+    "behavioral_intelligence": 0.0
+  },
+  "unified_score": 76.71,
+  "hiring_fit_percentage": 76.71,
+  "status": "Good Fit",
+  "component_contributions": {
+    "ats": 15.0,
+    "screening": 15.0,
+    "hr_interview": 20.0,
+    "technical_interview": 35.0,
+    "machine_test": 15.0
+  },
+  "normalization_details": {
+    "method": "minmax",
+    "scale_min": 0.0,
+    "scale_max": 100.0,
+    "outliers_detected": false,
+    "outlier_adjustment": 0.0
+  },
+  "calculation_timestamp": "2026-07-27T21:17:34.342196",
+  "calculation_notes": [
+    "Applied weights for role: python_developer",
+    "ats: normalized 70 \u2192 70.0",
+    "screening: normalized 54.5 \u2192 54.50000000000001",
+    "hr_interview: normalized 75 \u2192 75.0",
+    "technical_interview: normalized 80 \u2192 86.66666666666667",
+    "machine_test: normalized 78 \u2192 84.66666666666667"
+  ],
+  "missing_rounds": [],
+  "red_flags": [],
+  "strengths": [
+    "Strong performance in technical_interview: 86.66666666666667",
+    "Strong performance in machine_test: 84.66666666666667"
+  ],
+  "concerns": [],
+  "recommendation": "Recommend for hire - Good fit",
+  "decision": "APPROVE"
+}
