@@ -1,0 +1,14 @@
+{
+    "candidate_id": "C001",
+    "decision": "Selected",
+    "confidence_score": 82.2,
+    "risk_factors": [
+        "No Major Risks"
+    ],
+    "recommendation": "Proceed with hiring.",
+    "explanation": {
+        "hiring_fit": 84,
+        "integrity_score": 82,
+        "behavior_score": 78
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "selected": {
+        "min_hiring_fit": 80,
+        "min_integrity": 80,
+        "min_behavior": 70
+    },
+
+    "review": {
+        "min_hiring_fit": 60,
+        "min_integrity": 60,
+        "min_behavior": 50
+    }
+}
