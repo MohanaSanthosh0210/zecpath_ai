@@ -1,0 +1,45 @@
+{
+    "report_sections": [
+
+        {
+            "id": "ats_summary",
+            "title": "ATS Summary"
+        },
+
+        {
+            "id": "screening_summary",
+            "title": "Screening Results"
+        },
+
+        {
+            "id": "hr_summary",
+            "title": "HR Interview Insights"
+        },
+
+        {
+            "id": "technical_summary",
+            "title": "Technical Performance"
+        },
+
+        {
+            "id": "behavior_summary",
+            "title": "Behavioral Analysis"
+        },
+
+        {
+            "id": "integrity_summary",
+            "title": "Integrity Assessment"
+        },
+
+        {
+            "id": "overall_score",
+            "title": "Unified Candidate Score"
+        },
+
+        {
+            "id": "final_decision",
+            "title": "Hiring Recommendation"
+        }
+
+    ]
+}
