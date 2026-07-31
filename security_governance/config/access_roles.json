@@ -1,0 +1,27 @@
+{
+    "roles": {
+
+        "admin": [
+
+            "read",
+            "write",
+            "delete",
+            "audit"
+
+        ],
+
+        "recruiter": [
+
+            "read",
+            "write"
+
+        ],
+
+        "viewer": [
+
+            "read"
+
+        ]
+
+    }
+}

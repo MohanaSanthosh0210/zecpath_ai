@@ -1,0 +1,11 @@
+{
+    "require_candidate_consent": true,
+
+    "enable_audit_logging": true,
+
+    "encrypt_reports": true,
+
+    "encrypt_transcripts": true,
+
+    "allow_role_based_access": true
+}
