@@ -1,0 +1,6 @@
+{
+    "minimum_score": 0,
+    "maximum_score": 100,
+    "allow_null_scores": false,
+    "weight_sum": 100
+}

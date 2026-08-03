@@ -1,0 +1,9 @@
+{
+    "required_fields": [
+        "status",
+        "score",
+        "recommendation"
+    ],
+    "allow_extra_fields": true,
+    "timeout_seconds": 30
+}

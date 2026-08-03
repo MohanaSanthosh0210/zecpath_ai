@@ -1,0 +1,8 @@
+{
+    "validate_pipeline": true,
+    "validate_scores": true,
+    "validate_conversations": true,
+    "validate_api_outputs": true,
+    "run_edge_case_tests": true,
+    "stop_on_critical_failure": false
+}
