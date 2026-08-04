@@ -1,0 +1,34 @@
+{
+    "future_features": [
+        {
+            "name": "AI Video Analysis",
+            "priority": "High",
+            "status": "Planned"
+        },
+        {
+            "name": "Emotion Detection",
+            "priority": "High",
+            "status": "Planned"
+        },
+        {
+            "name": "Real-Time Interview Feedback",
+            "priority": "Medium",
+            "status": "Planned"
+        },
+        {
+            "name": "AI Coaching System",
+            "priority": "High",
+            "status": "Proposed"
+        },
+        {
+            "name": "Candidate Improvement Suggestions",
+            "priority": "Medium",
+            "status": "Proposed"
+        },
+        {
+            "name": "Interview Analytics Dashboard",
+            "priority": "High",
+            "status": "Planned"
+        }
+    ]
+}
