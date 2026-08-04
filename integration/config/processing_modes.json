@@ -1,0 +1,16 @@
+{
+    "async": [
+        "resume_parser",
+        "ats_engine",
+        "screening_ai",
+        "machine_test_ai",
+        "report_generator"
+    ],
+    "sync": [
+        "hr_interview",
+        "technical_interview",
+        "behavior_ai",
+        "integrity_detection",
+        "hiring_intelligence"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "authentication": {
+        "method": "Bearer Token",
+        "transport": "HTTPS",
+        "authorization": "Role Based Access Control",
+        "token_expiry_minutes": 60
+    }
+}

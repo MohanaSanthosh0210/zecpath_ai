@@ -1,0 +1,58 @@
+{
+    "apis": [
+        {
+            "name": "Resume Parser API",
+            "module": "resume_parser",
+            "endpoint": "/api/resume/parse",
+            "processing": "async"
+        },
+        {
+            "name": "ATS Scoring API",
+            "module": "ats_engine",
+            "endpoint": "/api/ats/score",
+            "processing": "async"
+        },
+        {
+            "name": "Screening AI API",
+            "module": "screening_ai",
+            "endpoint": "/api/screening/evaluate",
+            "processing": "async"
+        },
+        {
+            "name": "HR Interview API",
+            "module": "hr_interview",
+            "endpoint": "/api/hr/interview",
+            "processing": "sync"
+        },
+        {
+            "name": "Technical Interview API",
+            "module": "technical_interview",
+            "endpoint": "/api/technical/interview",
+            "processing": "sync"
+        },
+        {
+            "name": "Behavior Analysis API",
+            "module": "behavior_ai",
+            "endpoint": "/api/behavior/analyze",
+            "processing": "sync"
+        },
+        {
+            "name": "Integrity Detection API",
+            "module": "integrity_detection",
+            "endpoint": "/api/integrity/check",
+            "processing": "sync"
+        },
+        {
+            "name": "Machine Test API",
+            "module": "machine_test_ai",
+            "endpoint": "/api/machine-test/evaluate",
+            "processing": "async"
+        },
+        {
+            "name": "Hiring Intelligence API",
+            "module": "hiring_intelligence",
+            "endpoint": "/api/hiring/finalize",
+            "processing": "sync"
+        }
+    ]
+}

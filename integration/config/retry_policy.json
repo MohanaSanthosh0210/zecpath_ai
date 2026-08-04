@@ -1,0 +1,6 @@
+{
+    "max_retries": 3,
+    "retry_delay_seconds": 2,
+    "backoff_strategy": "exponential",
+    "timeout_seconds": 30
+}
