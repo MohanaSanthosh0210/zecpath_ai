@@ -1,0 +1,11 @@
+{
+    "cache_items": [
+        "resume_parsing_results",
+        "job_descriptions",
+        "semantic_embeddings",
+        "ats_scores",
+        "candidate_profiles"
+    ],
+    "cache_expiry_minutes": 60,
+    "cache_type": "memory"
+}

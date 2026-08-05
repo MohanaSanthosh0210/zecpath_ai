@@ -1,0 +1,8 @@
+{
+    "load_balancer": true,
+    "microservices": true,
+    "horizontal_scaling": true,
+    "auto_scaling": true,
+    "max_instances": 20,
+    "database_replication": true
+}

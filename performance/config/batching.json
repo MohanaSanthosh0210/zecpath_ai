@@ -1,0 +1,7 @@
+{
+    "resume_batch_size": 10,
+    "ats_batch_size": 20,
+    "semantic_matching_batch_size": 15,
+    "machine_test_batch_size": 10,
+    "max_parallel_batches": 4
+}

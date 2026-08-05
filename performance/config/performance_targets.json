@@ -1,0 +1,26 @@
+{
+    "resume_parser": {
+        "target_latency_ms": 2000
+    },
+    "ats_engine": {
+        "target_latency_ms": 500
+    },
+    "screening_ai": {
+        "target_latency_ms": 700
+    },
+    "hr_interview": {
+        "target_latency_ms": 800
+    },
+    "technical_interview": {
+        "target_latency_ms": 1000
+    },
+    "machine_test_ai": {
+        "target_latency_ms": 1500
+    },
+    "hiring_intelligence": {
+        "target_latency_ms": 400
+    },
+    "report_generation": {
+        "target_latency_ms": 300
+    }
+}
