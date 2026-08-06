@@ -2,7 +2,7 @@
 
 The diagrams below illustrate the main components and common request/processing sequences. Use these as a basis for PNG export or further refinement.
 
-**Component Diagram (Mermaid flowchart)**
+Component Diagram (Mermaid flowchart)
 
 ```mermaid
 flowchart TD
@@ -36,7 +36,7 @@ flowchart TD
 
 ```
 
-**Sequence Diagram: Resume -> ATS -> Shortlist**
+Sequence Diagram: Resume -> ATS -> Shortlist
 
 ```mermaid
 sequenceDiagram
@@ -60,7 +60,7 @@ sequenceDiagram
 
 ```
 
-**Sequence Diagram: Screening Call -> Scoring & Report**
+Sequence Diagram: Screening Call -> Scoring & Report
 
 ```mermaid
 sequenceDiagram
@@ -86,5 +86,6 @@ sequenceDiagram
 ```
 
 Notes
+
 - Export: render the Mermaid blocks in your preferred editor or Mermeid CLI to PNG/SVG.
 - Files referenced in the diagrams map to code in the repository: `main.py`, `technical_scoring/`, `hr_scoring/`, `scoring/unified_scoring_engine.py`, `adaptive_followup/`.

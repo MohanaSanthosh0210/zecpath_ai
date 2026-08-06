@@ -1,0 +1,33 @@
+{
+    "excellent": {
+        "ats_score": 92,
+        "screening_score": 90,
+        "technical_score": 95,
+        "hr_score": 91,
+        "behavior": "Excellent"
+    },
+
+    "good": {
+        "ats_score": 84,
+        "screening_score": 82,
+        "technical_score": 85,
+        "hr_score": 83,
+        "behavior": "Good"
+    },
+
+    "average": {
+        "ats_score": 68,
+        "screening_score": 65,
+        "technical_score": 63,
+        "hr_score": 66,
+        "behavior": "Average"
+    },
+
+    "weak": {
+        "ats_score": 45,
+        "screening_score": 40,
+        "technical_score": 38,
+        "hr_score": 42,
+        "behavior": "Weak"
+    }
+}
