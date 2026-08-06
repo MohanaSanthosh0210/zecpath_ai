@@ -1,0 +1,10 @@
+{
+    "metrics": [
+        "response_time_ms",
+        "accuracy",
+        "failure_rate",
+        "throughput",
+        "candidate_processing_count",
+        "interview_success_rate"
+    ]
+}

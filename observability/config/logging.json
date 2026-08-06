@@ -1,0 +1,8 @@
+{
+    "log_api_requests": true,
+    "log_api_responses": true,
+    "log_model_outputs": true,
+    "log_errors": true,
+    "log_decisions": true,
+    "retention_days": 180
+}

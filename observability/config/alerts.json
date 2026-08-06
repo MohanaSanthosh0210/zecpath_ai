@@ -1,0 +1,6 @@
+{
+    "response_time_threshold_ms": 2000,
+    "failure_rate_threshold_percent": 5,
+    "accuracy_threshold_percent": 85,
+    "critical_error_threshold": 10
+}

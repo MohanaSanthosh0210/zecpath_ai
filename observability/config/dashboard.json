@@ -1,0 +1,12 @@
+{
+    "sections": [
+        "System Health",
+        "API Performance",
+        "Candidate Processing",
+        "Interview Statistics",
+        "Accuracy Trends",
+        "Failure Trends",
+        "Alerts",
+        "Audit Logs"
+    ]
+}
