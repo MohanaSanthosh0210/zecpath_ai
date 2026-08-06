@@ -1,0 +1,19 @@
+sequenceDiagram
+  participant Interviewer
+  participant AudioService
+  participant STT
+  participant Cleaner
+  participant NLP
+  participant Scoring
+  participant Behavior
+  participant Report
+
+  Interviewer->>AudioService: Upload(audio)
+  AudioService->>STT: transcribe(audio)
+  STT-->>Cleaner: raw_transcript
+  Cleaner->>NLP: clean_transcript
+  NLP-->>Scoring: structured_answers
+  Scoring->>Behavior: request_behavior_analysis
+  Behavior-->>Scoring: behavior_metrics
+  Scoring-->>Report: generate(candidate_report)
+  Report-->>Interviewer: deliver(report)

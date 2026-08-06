@@ -1,0 +1,30 @@
+
+flowchart TD
+  A[Job Description / Resume Upload] --> B[Resume Parser]
+  B --> C[Structured Resume / JD Storage]
+  C --> D[ATS Engine]
+  D --> E[Score Normalizer]
+  E --> F[Ranking & Shortlisting]
+
+  subgraph InterviewFlow [Interview & Screening]
+    G[Audio Capture] --> H[Speech-to-Text Service]
+    H --> I[Transcript Cleaner]
+    I --> J[Answer Understanding - NLP]
+    J --> K[Screening Scoring]
+    K --> L[Behavior Analysis]
+    K --> M[Technical Scoring]
+  end
+
+  J --> N[Conversation Flow Engine]
+  M --> O[Technical Report Generator]
+  L --> P[Behavioral Report Generator]
+
+  F --> Q[Unified Scoring Engine]
+  O --> Q
+  P --> Q
+  Q --> R[Recruiter View / Final Report]
+  S[Observability & Logging] ---|collects| B
+  S ---|collects| H
+  S ---|collects| K
+  S ---|collects| Q
+
