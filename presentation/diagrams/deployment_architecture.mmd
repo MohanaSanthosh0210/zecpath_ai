@@ -1,0 +1,66 @@
+
+flowchart TB
+
+Users["Users"]
+
+LoadBalancer["Load Balancer"]
+
+Frontend["Frontend"]
+
+Backend["Backend Services"]
+
+Resume["Resume Parser"]
+
+ATS["ATS Engine"]
+
+Screening["Screening AI"]
+
+HR["HR Interview AI"]
+
+Technical["Technical Interview AI"]
+
+Decision["Decision AI"]
+
+Database[(Database)]
+
+Monitoring["Monitoring & Logging"]
+
+Governance["Security & Governance"]
+
+Users --> LoadBalancer
+
+LoadBalancer --> Frontend
+
+Frontend --> Backend
+
+Backend --> Resume
+
+Backend --> ATS
+
+Backend --> Screening
+
+Backend --> HR
+
+Backend --> Technical
+
+Backend --> Decision
+
+Resume --> Database
+
+ATS --> Database
+
+Screening --> Database
+
+HR --> Database
+
+Technical --> Database
+
+Decision --> Database
+
+Monitoring -.-> Backend
+
+Monitoring -.-> Database
+
+Governance -.-> Backend
+
+Governance -.-> Database

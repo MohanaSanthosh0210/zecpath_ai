@@ -54,7 +54,7 @@ Hiring Report
 # Module Review
 
 | Module | Status | Remarks |
-|---------|--------|---------|
+| --------- | -------- | --------- |
 | Resume Parser | Passed | Successfully extracts candidate information. |
 | ATS Engine | Passed | Accurately scores resumes against job descriptions. |
 | Screening AI | Passed | Generates screening scores and recommendations. |

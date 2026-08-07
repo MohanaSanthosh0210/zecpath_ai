@@ -1,0 +1,157 @@
+Deliverable 1 – AI Demo Presentation Deck
+Slide 1 – Title
+Zecpath AI
+
+AI-Powered Hiring Intelligence Platform
+
+M.Tech Artificial Intelligence
+College of Engineering Trivandrum
+Slide 2 – Problem Statement
+Traditional Hiring Challenges
+
+• Large resume volumes
+• Manual screening effort
+• Interview bias
+• Inconsistent evaluations
+• Slow recruitment cycle
+Slide 3 – AI Solution
+Zecpath AI Solution
+
+• Resume Parsing
+• ATS Scoring
+• AI Screening
+• HR Interview AI
+• Technical Interview AI
+• Integrity Detection
+• Final Recommendation AI
+Slide 4 – System Architecture
+Candidate
+
+↓
+
+Resume Parser
+
+↓
+
+ATS Engine
+
+↓
+
+Screening AI
+
+↓
+
+HR Interview AI
+
+↓
+
+Technical Interview AI
+
+↓
+
+Behavior + Integrity Analysis
+
+↓
+
+Decision AI
+
+↓
+
+Hiring Report
+Slide 5 – ATS Engine
+Features
+
+• Resume parsing
+• Skill extraction
+• Experience detection
+• ATS scoring
+• Job matching
+Slide 6 – Screening AI
+Features
+
+• Speech-to-Text
+• Answer understanding
+• Conversation management
+• Screening score generation
+Slide 7 – HR Interview AI
+Features
+
+• Dynamic follow-up questions
+• Communication analysis
+• Confidence analysis
+• HR scoring
+Slide 8 – Technical Interview AI
+Features
+
+• Role-based questioning
+• Aptitude evaluation
+• Technical scoring
+• Scenario evaluation
+Slide 9 – Decision AI
+Final Decision Categories
+
+Selected
+
+Hold / Review
+
+Rejected
+Slide 10 – Monitoring & Governance
+Implemented
+
+• Ethics Review
+• Governance
+• Audit Logging
+• Monitoring
+• Observability
+• Security Controls
+Slide 11 – Demo Flow
+Resume Upload
+
+↓
+
+ATS Score
+
+↓
+
+Screening
+
+↓
+
+HR Interview
+
+↓
+
+Technical Interview
+
+↓
+
+Decision AI
+
+↓
+
+Hiring Report
+Slide 12 – Sample Output
+
+Show:
+
+{
+    "candidate_id": "C001",
+    "hiring_fit": 88.5,
+    "decision": "Selected",
+    "confidence": 92
+}
+Slide 13 – Business Impact
+Benefits
+
+• Faster hiring
+• Reduced manual effort
+• Consistent evaluation
+• Explainable decisions
+• Scalable recruitment
+Slide 14 – Future Scope
+• LLM-based interviewing
+• Video interview analysis
+• Multi-language support
+• Enterprise dashboards
+Slide 15 – Thank You
+Questions?

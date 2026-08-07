@@ -1,0 +1,52 @@
+
+flowchart TD
+
+Frontend["Frontend / Web UI"]
+
+Gateway["Backend API Gateway"]
+
+Resume["Resume Parser API"]
+
+ATS["ATS Scoring API"]
+
+Screening["Screening AI API"]
+
+HR["HR Interview API"]
+
+Technical["Technical Interview API"]
+
+Decision["Decision AI API"]
+
+Database[("Database")]
+
+Frontend
+    -->
+Gateway
+
+Gateway
+    -->
+Resume
+
+Resume
+    -->
+ATS
+
+ATS
+    -->
+Screening
+
+Screening
+    -->
+HR
+
+HR
+    -->
+Technical
+
+Technical
+    -->
+Decision
+
+Decision
+    -->
+Database
