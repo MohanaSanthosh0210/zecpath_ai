@@ -2,38 +2,44 @@
 
 ## Objective
 
-Define the long-term evolution of the Zecpath AI Platform.
+Define the strategic evolution of the Zecpath AI Platform from a modular internship prototype into a scalable enterprise-grade AI hiring system.
 
 ---
 
-## Roadmap Phases
+## Phase 1 — Foundation Intelligence
 
-### Phase 1
+Focus on strengthening core hiring workflows:
+- AI-assisted hiring pipeline orchestration
+- improved candidate matching and ranking
+- unified scoring across ATS, screening, and interviews
+- structured reporting and stakeholder-ready outputs
 
-- AI Hiring Pipeline
-- Recommendation Engine
-- Hiring Intelligence
+## Phase 2 — Behavioral and Integrity Enhancements
 
-### Phase 2
+Expand the platform with more nuanced assessment capabilities:
+- behavioral signal analysis
+- confidence and uncertainty detection
+- integrity and contradiction monitoring
+- improved feedback quality and explainability
 
-- Behavioral Improvements
-- Integrity Enhancements
-- Interview Analytics
+## Phase 3 — Multimodal and Coaching Intelligence
 
-### Phase 3
+Advance toward a more intelligent, human-centered experience:
+- video and audio-based analysis support
+- emotion and communication insights
+- AI coaching and interview guidance
+- richer candidate experience and recruiter support
 
-- AI Video Analysis
-- Emotion Detection
-- AI Coaching
+## Phase 4 — Enterprise Deployment
 
-### Phase 4
-
-- Enterprise Deployment
-- Cloud Scaling
-- Multi-Tenant Platform
+Prepare the system for broader adoption:
+- cloud deployment and scalability
+- multi-tenant platform support
+- governance, security, and compliance controls
+- observability and monitoring for production operations
 
 ---
 
 ## Expected Outcome
 
-A scalable AI hiring platform capable of supporting enterprise recruitment.
+A robust, scalable, and responsible AI hiring platform capable of supporting enterprise recruitment, continuous improvement, and long-term innovation.

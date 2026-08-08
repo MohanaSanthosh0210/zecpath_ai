@@ -1,74 +1,80 @@
 \# Zecpath AI Platform
 
+## Final Internship Submission
 
+The Zecpath AI Platform is a modular, AI-driven recruitment intelligence system designed to automate and optimize hiring workflows. It brings together resume parsing, semantic matching, candidate screening, interview analysis, scoring, and reporting into a single reusable platform for HR and recruiting use cases.
 
-The Zecpath AI Platform is a modular, AI-driven system designed to automate and optimize recruitment workflows, including ATS parsing, candidate screening, and interview analysis.
+## What This Repository Contains
 
+- ATS and resume parsing workflows
+- candidate screening and interview evaluation logic
+- semantic matching and skill extraction modules
+- reporting and demo generation pipelines
+- documentation, validation reports, and roadmap materials
 
+## Repository Structure
 
-\## Project Structure
+- [ats_engine](ats_engine/) – resume parsing and ATS-related analysis
+- [screening_ai](screening_ai/) – screening and candidate evaluation logic
+- [interview_ai](interview_ai/) – interview orchestration and analysis
+- [scoring](scoring/) – scoring and ranking engines
+- [skills](skills/) – skill extraction and normalization support
+- [docs](docs/) – architecture, roadmap, reports, and portfolio docs
+- [tests](tests/) – validation and regression test suite
 
-\- `ats\_engine/`: Logic for parsing and analyzing resumes.
+## Setup Instructions
 
-\- `screening\_ai/`: AI models for candidate screening.
+### Prerequisites
 
-\- `interview\_ai/`: Tools for managing and analyzing interviews.
+- Python 3.10 or newer
+- pip
+- Windows PowerShell, bash, or equivalent terminal
 
-\- `scoring/`: Scoring algorithms for candidate evaluation.
+### Local Setup
 
-\- `utils/`: Helper functions and logging systems.
+1. Clone the repository.
+2. Create and activate a virtual environment:
+   - Windows PowerShell: `python -m venv .venv` then `.\.venv\Scripts\activate`
+3. Install dependencies:
+   - `pip install --upgrade pip`
+   - `pip install -r requirements.txt`
 
-\- `tests/`: Unit and integration tests.
+### Run the Main Workflow
 
-
-
-\## Setup Instructions
-
-1\. Clone this repository.
-
-2\. Create a virtual environment: `python -m venv venv`
-
-3\. Activate the environment: `.\\venv\\Scripts\\activate`
-
-4\. Install requirements: `pip install -r requirements.txt`
-
-## Unified Scoring Engine
-
-The platform now includes a unified hiring intelligence score that combines ATS, screening, and HR interview results into a single candidate score object.
-
-Use it with:
-
-```python
-from scoring.unified_scoring_engine import calculate_unified_score
-
-result = calculate_unified_score(
-    role="python developer",
-    ats_score=85,
-    screening_score=78,
-    hr_score=82,
-    candidate_id="C100",
-    job_id="J100",
-)
+```bash
+python main.py
 ```
 
-It returns a score object containing:
-- round-level scores for ATS, screening, and HR interview
-- role-based weighting adjustments
-- a hiring-fit percentage
-- a status label such as Strong Fit or Needs Review
+### Demo and HR Interview Modules
 
-## HR Interview Demo & Finalization
+The repository also includes demo and interview runners for stakeholder review:
 
-The final HR interview module is ready for stakeholder review.
+```bash
+python hr_interview/hr_interview_runner.py
+python hr_scoring/hr_runner.py
+python hr_interview/demo_runner.py
+```
 
-Run the components with:
-- python hr_interview/hr_interview_runner.py
-- python hr_scoring/hr_runner.py
-- python hr_interview/demo_runner.py
+Generated outputs are written under the data folder, including HR interview and demo artifacts.
 
-Generated artifacts are written under data/hr_interview/ and include demo_dataset.json, manager_evaluation_feedback.json, and final_demo_report.json.
+## Key Platform Capabilities
 
-\## License
+- semantic candidate-to-job matching
+- skill extraction and normalization
+- scoring for ATS, screening, and interview rounds
+- structured reporting for hiring review
+- reusable modules for future expansion
+
+## Submission Package
+
+This submission is organized for review and presentation:
+
+- [docs/Final_Submission_Index.md](docs/Final_Submission_Index.md)
+- [docs/Internship_Portfolio.md](docs/Internship_Portfolio.md)
+- [docs/AI_Roadmap.md](docs/AI_Roadmap.md)
+- [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
+
+## License
 
 This project is proprietary to Zecpath.
 

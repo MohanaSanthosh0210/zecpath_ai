@@ -41,7 +41,7 @@ class ObservabilityEngine:
         )
 
         dashboard = (
-            DashboardDesigner.create_dashboard()
+            DashboardDesigner.create_dashboard(metrics=metrics, alerts=alerts)
         )
 
         summary = {
